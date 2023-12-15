@@ -203,7 +203,7 @@ void Application_Jump_Check(void)
 		}
 
 		// On a power-on reset, we ALWAYS want to go to the sketch. If there is one.
-		else if ((mcusr_state & (1 << PORF))){
+		else if ((mcusr_state & (1 << PORF)) || (mcusr_state & (1 << BORF))){
 			if(!POWER_ON_TO_BOOTLOADER){
 				StartSketch();
 			}
