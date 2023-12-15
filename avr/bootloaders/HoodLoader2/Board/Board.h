@@ -59,7 +59,8 @@ extern "C" {
 			
 			// USB product string settings
 			#if (PRODUCTID == ARDUINO_UNO_PID)
-			#define USB_DESCRIPTOR_STRING L"HoodLoader2 Uno"
+//			#define USB_DESCRIPTOR_STRING L"HoodLoader2 Uno"
+			#define USB_DESCRIPTOR_STRING L"HU" //Save some precious bytes.
 			#elif (PRODUCTID == ARDUINO_MEGA_PID)
 			#define USB_DESCRIPTOR_STRING L"HoodLoader2 Mega"
 			#elif (PRODUCTID == ARDUINO_ADK_PID)
